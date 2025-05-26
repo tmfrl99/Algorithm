@@ -13,18 +13,18 @@ public class Main {
 			set.add(Integer.parseInt(st.nextToken()));
 
 		int m = Integer.parseInt(br.readLine());
-		String[] str = new String[m];
 		st = new StringTokenizer(br.readLine());
+		StringBuilder sb = new StringBuilder(m);
 		for (int i = 0; i < m; i++) {
 			int j = Integer.parseInt(st.nextToken());
 			if (set.contains(j))
-				str[i] = "1";
+				sb.append('1');
 			else
-				str[i] = "0";
+				sb.append('0');
+			sb.append(' ');
 		}
 
-		bw.write(String.join(" ", str));
-
+		bw.write(sb.toString());
 		bw.flush();
 		bw.close();
 		br.close();
