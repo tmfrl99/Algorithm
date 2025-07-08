@@ -30,7 +30,6 @@ public class Main {
 				arrB[i][j] = Integer.parseInt(st.nextToken());
 		}
 
-		int[][] res = new int[na][mb];
 		int sum;
 		for (int i = 0; i < na ; i++) {
 			for (int j = 0; j < mb; j++) {
@@ -38,8 +37,7 @@ public class Main {
 				for (int k = 0; k < ma; k++) {
 					sum += arrA[i][k] * arrB[k][j];
 				}
-				res[i][j] = sum;
-				sb.append(res[i][j]).append(" ");
+				sb.append(sum).append(" ");
 			}
 			sb.append("\n");
 		}
